@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body class="p-3 mb-2 bg-light">
+ <div class="jumbotron text-center p-3 mb-2 bg-light">
+    <h1 class = "text-warning">STARTWARS Application</h1>
+    <a href="/">HOME</a> | <a href="/people">PEOPLE</a>
+  </div>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap.min.css" rel="stylesheet"/>
+    <div class="container p-3 mb-2 bg-light text-warning"> <h1>Starships List</h1> 
+    <p class="p-3 mb-2 bg-light text-white"> {{ variable | safe}} </p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+  $('#example').DataTable();
+});
+    </script>
+</body>
+</html>
