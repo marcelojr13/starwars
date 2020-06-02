@@ -5,7 +5,6 @@ import requests
 import json
 import string
 import pandas as pd
-from json2html import *
 
 def peopleList():
     #Coletando os dados a API People
