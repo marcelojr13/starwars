@@ -21,4 +21,5 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
+WORKDIR starwars/app
 CMD ["flask", "run"]
