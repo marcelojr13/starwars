@@ -22,4 +22,4 @@ ENV NAME World
 
 # Run app.py when the container launches
 WORKDIR starwars/app
-CMD ["start.sh"]
+CMD ["./start.sh"]
