@@ -22,4 +22,4 @@ ENV NAME World
 
 # Run app.py when the container launches
 WORKDIR starwars/app
-CMD ["flask", "run"]
+CMD ["flask", "run --host=0.0.0.0 --port=80"]
