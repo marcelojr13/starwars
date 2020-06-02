@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM python:3.8.3-slim
+FROM tiangolo/uwsgi-nginx-flask:python3.6-alpine3.7
 MAINTAINER Marcelo Leal Junior <marceloleal.junior@gmail.com>
 
 #To build it, type (example):
@@ -18,8 +18,14 @@ RUN cd starwars/app && pip install --trusted-host pypi.python.org -r requirement
 EXPOSE 80
 
 # Define environment variable
+ENV STATIC_URL /static
+ENV STATIC_PATH /app/starwars/app/static
 ENV NAME World
 
 # Run app.py when the container launches
 WORKDIR starwars/app
 CMD ["flask", "run"]
+
+
+COPY ./requirements.txt /var/www/requirements.txt
+RUN pip install -r /var/www/requirements.txt
