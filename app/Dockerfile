@@ -26,6 +26,3 @@ ENV NAME World
 WORKDIR starwars/app
 CMD ["flask", "run"]
 
-
-COPY ./requirements.txt /var/www/requirements.txt
-RUN pip install -r /var/www/requirements.txt
