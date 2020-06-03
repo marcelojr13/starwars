@@ -36,7 +36,7 @@ https://www.instagram.com/pandoraprogramming/
 
 ## DOCKER INSTRUCTIONS
 ### Start the Ubuntu/Linux VM to create the docker image
-az vm start starwars2020 --resource-group starwars
+az vm start --name starwars2020 --resource-group starwars
 
 ### Make sure the local files are updated
 cd starwars/
@@ -58,4 +58,4 @@ az container create --image marcelojr13/starwarsjr13:latest --location southcent
 az container list
 
 ### Deallocate the Ubuntu/Linux VM to stop charges
-az vm deallocate starwars2020 --resource-group starwars
+az vm deallocate --name starwars2020 --resource-group starwars
