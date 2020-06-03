@@ -35,6 +35,9 @@ https://docs.docker.com/
 https://www.instagram.com/pandoraprogramming/
 
 ## DOCKER INSTRUCTIONS
+### Start the Ubuntu/Linux VM to create the docker image
+az vm start starwars2020 --resource-group starwars
+
 ### Make sure the local files are updated
 cd starwars/
 
@@ -47,3 +50,12 @@ docker build -t marcelojr13/starwarsjr13:latest .
 docker tag <insert-new-image-id-here> marcelojr13/starwarsjr13:latest
 
 docker push marcelojr13/starwarsjr13:latest
+
+### Deploy docker on Azure Container Instance
+az container create --image marcelojr13/starwarsjr13:latest --location southcentralus --ip-address Public --resource-group starwars --name starwarsjr13
+
+### Get the Public IP Address of the ACI created
+az container list
+
+### Deallocate the Ubuntu/Linux VM to stop charges
+az vm deallocate starwars2020 --resource-group starwars
