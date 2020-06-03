@@ -37,9 +37,13 @@ https://www.instagram.com/pandoraprogramming/
 ## DOCKER INSTRUCTIONS
 ### Make sure the local files are updated
 cd starwars/
+
 git pull
+
 ### Build the docker image
 docker build -t marcelojr13/starwarsjr13:latest .
+
 ### Tag the new image ID
 docker tag <insert-new-image-id-here> marcelojr13/starwarsjr13:latest
+
 docker push marcelojr13/starwarsjr13:latest
